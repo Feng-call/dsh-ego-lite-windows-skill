@@ -23,6 +23,21 @@ pnpm add <本包路径或 npm 包名>
 
 装完后 `package.json` 的 `dsh.profile.bundles` 里会出现 `dsh-ego-lite-windows-skill`，重启 DSH 生效。
 
+### 方式 A2：直接从 GitHub 装（不用 clone）
+
+DSH 插件管理器（或命令行）可以直接吃 git 地址，本仓库已声明 `dsh.bundle`，所以能被当成插件安装：
+
+```bash
+# 插件管理器里填：github:Feng-call/dsh-ego-lite-windows-skill
+# 或者在 profile 目录：
+cd ~/.dsh/profiles/desktop
+pnpm add github:Feng-call/dsh-ego-lite-windows-skill
+```
+
+装完 `package.json` 的 `dsh.profile.bundles` 会多一行，**重启 DSH 生效**。
+
+> 对照：`github:citrolabs/ego-lite` 装不上，是因为那个仓库是浏览器本体、没有 `dsh.bundle` 声明。
+
 ### 方式 B：只要技能，不装插件（最省事）
 
 ```powershell
