@@ -1,0 +1,40 @@
+{
+  "name": "dsh-ego-lite-windows-skill",
+  "version": "0.1.0",
+  "description": "ego lite (Windows) browser skill for DeepSeek Harness — which browser is which, split-space defaults, ego-browser CLI usage, and the pitfalls (sandbox bootstrap, PowerShell quoting, user tab protection, round-per-process). Ships a native dsh bundle that registers the skill through ctx.skills.",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "skills",
+    "cordis.patch.yml",
+    "install.sh",
+    "install.ps1",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "skill",
+    "ego-lite",
+    "ego-browser",
+    "browser-automation"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.1.0-rc.7"
+    },
+    "category": "skill",
+    "displayName": "ego lite 浏览器技能",
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
